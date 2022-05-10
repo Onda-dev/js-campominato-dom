@@ -2,7 +2,7 @@
 // I numeri non possono essere duplicati.
 const bombsList = []
 while ( bombsList.length < 16 ) {
-    let bombs = Math.floor(Math.random() * 20) + 1
+    let bombs = Math.floor(Math.random() * 100) + 1
     if (!bombsList.includes(bombs) ) {
         bombsList.push(bombs)
     }
@@ -10,23 +10,35 @@ while ( bombsList.length < 16 ) {
 console.log(bombsList)
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 // L’utente non può inserire più volte lo stesso numero.
-let userChoices = []
-let userNumber
+// Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
+let userAttempts = []
+let bombExploded = false
 
-while ( userChoices.length <= 5 ) {
+while ( !bombExploded && userAttempts.length < 84 ) {
 
+    let userNumber
+    do {
     userNumber = Number(prompt("Inserisci un numero compreso tra 1 e 100"))
-    if ( !userChoices.includes(userNumber) ) {
-        userChoices.push(userNumber)
+    } while ( isNaN(userNumber) || userNumber < 1 || userNumber > 100 )
+
+    if ( bombsList.includes(userNumber) ) {
+        bombExploded = true
+    } else if ( userAttempts.includes(userNumber) ) {
+        alert("Il numero è già stato inserito")
     } else {
-        alert ("Inserisci un altro numero")
+        userAttempts.push(userNumber)
     }
     
 }
-
-console.log(userChoices)
-
-// Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
-
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito
+if ( bombExploded ) {
+    alert (`Hai perso! Il tuo punteggio è ${userAttempts.length}`)
+} else {
+    alert ("Hai vinto!")
+}
+console.log("Gioco terminato")
+
+
+
+
