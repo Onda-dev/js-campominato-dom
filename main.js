@@ -7,6 +7,7 @@ while ( bombsList.length < 16 ) {
         bombsList.push(bombs)
     }
 }
+console.log(bombsList)
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 // L’utente non può inserire più volte lo stesso numero.
 let userChoices = []
@@ -24,7 +25,7 @@ while ( userChoices.length <= 5 ) {
 }
 
 console.log(userChoices)
-console.log(bombsList)
+
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
