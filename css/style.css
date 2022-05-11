@@ -1,0 +1,43 @@
+/*--------------------
+    RESET
+---------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------
+    COMMONS
+---------------------*/
+
+
+/*--------------------
+    HEADER
+---------------------*/
+.header {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: pink;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: large;
+}
+
+.header img {
+    width: 60px;
+}
+
+.container {
+    padding: 20px;
+}

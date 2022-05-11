@@ -5,8 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Campo minato</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <script src="main.js"></script>
+        <div class="header">
+
+                <div class="logo">
+                    <img src="img/bomb.png" alt="">
+                    <div class="logo-text">
+                        Campo minato
+                    </div>
+                </div>
+
+
+            <div class="difficulty-selector">
+                <label for="levels">Difficulty:</label>
+                <select id="level" name="Levels">
+                    <option value="Easy">Easy</option>
+                    <option value="saab">Normal</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+        </div>
+
+        <script src="js/mainWithDom.js"></script>
     </body>
 </html>
