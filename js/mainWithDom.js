@@ -6,23 +6,34 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min +1) ) + min
 }
 let level
+let totalNumbers
+
 function difficultySelect() {
     level = document.getElementById("level").value
     console.log(level)
+
+    if ( level === "0" ) {
+        totalNumbers = 100
+        console.log(totalNumbers)
+    } else if ( level === "1" ) {
+        totalNumbers = 80
+        console.log(totalNumbers)
+    } else {
+        totalNumbers = 50
+        console.log(totalNumbers)
+    }
+}
+console.log(totalNumbers)
+
+for ( let i = 1; i <= totalNumbers; i++) {
+    const div = document.createElement("div")
+    div.innerHTML = "prova"
+    document.getElementById("field").appendChild(div)
 }
 
 
-let totalNumbers
-if ( level === 0 ) {
-    totalNumbers = 100
-    console.log(totalNumbers)
-} else if ( level === 1 ) {
-    totalNumbers = 80
-    console.log(totalNumbers)
-} else {
-    totalNumbers = 50
-    console.log(totalNumbers)
-}
+
+
 
 // const bombsList = []
 // const boombsNumber = 16
