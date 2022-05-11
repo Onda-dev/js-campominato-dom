@@ -2,25 +2,28 @@
 // con difficoltà 0 => tra 1 e 100
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
-// function randomNumber(min, max) {
-//     return Math.floor(Math.random() * (max - min +1) ) + min
-// }
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min +1) ) + min
+}
+let level
+function difficultySelect() {
+    level = document.getElementById("level").value
+    console.log(level)
+}
 
-// let level
-// do {
-//     level = Number(prompt("Inserisci un livello di difficoltà fra 0, 1 e 2"))
-// } while ( isNaN(level) || level > 2 || level < 0)
 
-// let totalNumbers
-// if ( level === 0 ) {
-//     totalNumbers = 100
-// } else if ( level === 1 ) {
-//     totalNumbers = 80
-// } else {
-//     totalNumbers = 50
-// }
+let totalNumbers
+if ( level === 0 ) {
+    totalNumbers = 100
+    console.log(totalNumbers)
+} else if ( level === 1 ) {
+    totalNumbers = 80
+    console.log(totalNumbers)
+} else {
+    totalNumbers = 50
+    console.log(totalNumbers)
+}
 
-// console.log(totalNumbers)
 // const bombsList = []
 // const boombsNumber = 16
 // const attemptsNumber = totalNumbers - boombsNumber

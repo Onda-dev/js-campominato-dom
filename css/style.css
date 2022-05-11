@@ -10,7 +10,12 @@
 /*--------------------
     COMMONS
 ---------------------*/
-
+.container {
+    margin: auto;
+    max-width: 1200px;
+    height: calc(100vh - 50px);
+    background-color: rgb(204, 130, 238);
+}
 
 /*--------------------
     HEADER
@@ -40,4 +45,13 @@
 
 .container {
     padding: 20px;
+}
+
+/*--------------------
+    FOOTER
+---------------------*/
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: pink;
 }
