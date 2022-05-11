@@ -5,12 +5,15 @@
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min +1) ) + min
 }
+
 let level
 let totalNumbers
 
 function difficultySelect() {
     level = document.getElementById("level").value
     console.log(level)
+
+    document.getElementById("field").innerHTML = ""
 
     if ( level === "0" ) {
         totalNumbers = 100
@@ -26,24 +29,28 @@ function difficultySelect() {
     for ( let i = 1; i <= totalNumbers; i++) {
         let div = document.createElement('button');
         div.classList.add('test');
-        div.innerHTML = "prova"
+        div.innerHTML = [i]
         document.getElementById("field").appendChild(div)
     }
+
+    const bombsList = []
+    const boombsNumber = 16
+
+    while ( bombsList.length < boombsNumber ) {
+        const bombs = randomNumber(1, totalNumbers)
+    
+        if (!bombsList.includes(bombs) ) {
+            bombsList.push(bombs)
+        }
+    }
+    console.log(bombsList)
 }
 console.log(totalNumbers)
 
-// const bombsList = []
-// const boombsNumber = 16
-// const attemptsNumber = totalNumbers - boombsNumber
 
-// while ( bombsList.length < boombsNumber ) {
-//     const bombs = randomNumber(1, totalNumbers)
 
-//     if (!bombsList.includes(bombs) ) {
-//         bombsList.push(bombs)
-//     }
-// }
-// console.log(bombsList)
+
+// // console.log(bombsList)
 // // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 // // L’utente non può inserire più volte lo stesso numero.
 // // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
