@@ -25,7 +25,7 @@ function difficultySelect() {
         totalNumbers = 50
         console.log(totalNumbers)
     }
-
+    
     for ( let i = 1; i <= totalNumbers; i++) {
         let div = document.createElement('button');
         div.classList.add('test');
@@ -33,19 +33,32 @@ function difficultySelect() {
         document.getElementById("field").appendChild(div)
     }
 
+    // document.getElementsByClassName("test").addEventListener("click", Attempt)
+
+    // attempts = [""]
+    // function Attempt() {
+    //     let attempt = getElementsByClassName("test").innerHTML
+    //     if ( !attempts.includes(attempt) ) {
+    //         attempts.push(attempt)
+    //     }
+    // }
+
+    // console.log(document.getElementsByClassName("test"))
+
     const bombsList = []
     const boombsNumber = 16
 
     while ( bombsList.length < boombsNumber ) {
         const bombs = randomNumber(1, totalNumbers)
     
-        if (!bombsList.includes(bombs) ) {
+        if ( !bombsList.includes(bombs) ) {
             bombsList.push(bombs)
         }
     }
     console.log(bombsList)
 }
 console.log(totalNumbers)
+
 
 
 
