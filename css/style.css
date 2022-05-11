@@ -13,10 +13,13 @@
 .container {
     margin: auto;
     max-width: 1200px;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     background-color: rgb(204, 130, 238);
 }
 
+body {
+    overflow: scroll;
+}
 /*--------------------
     HEADER
 ---------------------*/
@@ -45,6 +48,19 @@
 
 .container {
     padding: 20px;
+}
+
+#field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.test {
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
 }
 
 /*--------------------

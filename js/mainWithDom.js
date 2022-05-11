@@ -22,18 +22,15 @@ function difficultySelect() {
         totalNumbers = 50
         console.log(totalNumbers)
     }
+
+    for ( let i = 1; i <= totalNumbers; i++) {
+        let div = document.createElement('button');
+        div.classList.add('test');
+        div.innerHTML = "prova"
+        document.getElementById("field").appendChild(div)
+    }
 }
 console.log(totalNumbers)
-
-for ( let i = 1; i <= totalNumbers; i++) {
-    const div = document.createElement("div")
-    div.innerHTML = "prova"
-    document.getElementById("field").appendChild(div)
-}
-
-
-
-
 
 // const bombsList = []
 // const boombsNumber = 16
